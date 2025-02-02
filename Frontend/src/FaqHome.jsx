@@ -8,7 +8,7 @@ const FaqHome = () => {
   useEffect(() => {
     const fetchFAQs = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/faqs/?lang=${langs}`);
+        const response = await fetch(`https://faq-management-system-backend.onrender.com/api/faqs/?lang=${langs}`);
         const data = await response.json();
         setFaqs(data);
       } catch (error) {
