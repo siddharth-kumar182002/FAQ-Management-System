@@ -21,7 +21,7 @@ const FaqEditor = () => {
   // Fetch FAQs from backend
   const fetchFAQs = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/faqs/?lang=${langs}`);
+      const response = await fetch(`/api/faqs/?lang=${langs}`);
       const data = await response.json();
       setFaqs(data);
     } catch (error) {
@@ -36,7 +36,7 @@ const FaqEditor = () => {
   // Add New FAQ
   const handleAddFAQ = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/faqs', {
+      const response = await fetch('/api/faqs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const FaqEditor = () => {
   // Update existing FAQ
   const handleSave = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/faqs/${id}`, {
+      const response = await fetch(`/api/faqs/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -89,7 +89,7 @@ const FaqEditor = () => {
   // Delete FAQ
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/faqs/${id}`, {
+      const response = await fetch(`/api/faqs/${id}`, {
         method: 'DELETE',
       });
 
