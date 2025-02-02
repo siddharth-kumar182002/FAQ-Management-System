@@ -5,6 +5,8 @@ A full-stack application for managing FAQs with multi-language support, rich tex
 ---
 ## Backend APIs
 ```bash
+#Frontend
+curl https://faq-management-system-frontend.onrender.com/
 # Fetch FAQs in English (default)
 curl https://faq-management-system-backend.onrender.com/api/faqs/
 
