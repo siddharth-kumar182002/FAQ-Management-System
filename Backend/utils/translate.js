@@ -10,6 +10,7 @@ const translate = new Translate({
 
 export const translateText = async (text, targetLang) => {
   try {
+    console.log('API Key exists:', process.env.GOOGLE_API_KEY ? 'Yes' : 'No');
     const [translation] = await translate.translate(text, targetLang);
     return translation;
   } catch (error) {
